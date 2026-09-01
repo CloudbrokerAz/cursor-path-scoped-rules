@@ -1,0 +1,7 @@
+---
+alwaysApply: true
+---
+
+CANARY:ALWAYS-DEMO-SCOPE
+
+This repo is a path-scoping demo. Stay in the area the user asked about. Do not invent extra packages.

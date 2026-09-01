@@ -1,0 +1,8 @@
+---
+globs: packages/shared/**
+alwaysApply: false
+---
+
+CANARY:SHARED-NO-FRAMEWORK
+
+Do not add runtime dependencies to `@factory/shared`. Callers may be web or API.

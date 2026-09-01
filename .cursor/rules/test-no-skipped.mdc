@@ -1,0 +1,8 @@
+---
+globs: "**/*.test.ts"
+alwaysApply: false
+---
+
+CANARY:TEST-NO-SKIPPED
+
+Do not commit `it.skip` or `describe.skip`. Fix or delete the test.

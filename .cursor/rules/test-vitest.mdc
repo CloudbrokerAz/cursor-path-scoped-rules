@@ -1,0 +1,8 @@
+---
+globs: "**/*.test.ts"
+alwaysApply: false
+---
+
+CANARY:TEST-VITEST
+
+Tests use Vitest (`describe` / `it` / `expect`). Do not add Jest APIs.
