@@ -1,0 +1,10 @@
+{
+  "name": "cursor-path-scoped-rules",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Toy monorepo that demonstrates Cursor path-scoped Project Rules (globs).",
+  "license": "MIT",
+  "scripts": {
+    "map-rules": "node scripts/map-claude-rules.mjs"
+  }
+}

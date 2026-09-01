@@ -1,0 +1,10 @@
+---
+alwaysApply: false
+---
+
+CANARY:MANUAL-MIGRATION
+
+Manual rule. Loads only when `@`-mentioned.
+
+When migrating Claude `paths:` rules: map each path glob to Cursor `globs`, set
+`alwaysApply: false`, and keep Always Apply rules under ~20 lines.

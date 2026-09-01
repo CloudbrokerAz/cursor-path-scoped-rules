@@ -1,0 +1,8 @@
+---
+globs: apps/web/**
+alwaysApply: false
+---
+
+CANARY:WEB-NAMED-EXPORTS
+
+Use named exports in `apps/web`. Do not add default exports.

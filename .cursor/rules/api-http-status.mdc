@@ -1,0 +1,8 @@
+---
+globs: apps/api/**
+alwaysApply: false
+---
+
+CANARY:API-HTTP-STATUS
+
+Use 400 for validation failures and 404 for missing resources. Do not return 200 with an error payload.

@@ -1,0 +1,9 @@
+---
+description: Performance notes when someone asks about latency, bundle size, or caching
+alwaysApply: false
+---
+
+CANARY:INTELLIGENT-PERF
+
+Apply Intelligently example: only pull this in when the user asks about performance.
+Keep measurements before changing caching or bundle splitting.

@@ -1,0 +1,8 @@
+---
+globs: apps/api/**
+alwaysApply: false
+---
+
+CANARY:API-ERROR-SHAPE
+
+Return `{ code: string, message: string }` for handler errors. Do not throw raw strings.

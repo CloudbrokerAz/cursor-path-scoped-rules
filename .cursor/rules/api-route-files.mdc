@@ -1,0 +1,8 @@
+---
+globs: apps/api/src/routes/**
+alwaysApply: false
+---
+
+CANARY:API-ROUTE-FILES
+
+One route module per resource. Handlers stay in `apps/api/src/routes/`. Schemas stay in `apps/api/src/schemas/`.

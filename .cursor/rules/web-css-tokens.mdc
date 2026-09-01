@@ -1,0 +1,8 @@
+---
+globs: apps/web/**/*.css
+alwaysApply: false
+---
+
+CANARY:WEB-CSS-TOKENS
+
+Define colors as CSS custom properties on `:root`. Do not hard-code hex values on component classes.

@@ -1,0 +1,8 @@
+---
+globs: packages/shared/**
+alwaysApply: false
+---
+
+CANARY:SHARED-EXPORT-TYPES
+
+Export shared types from `packages/shared/src/types.ts`. Do not duplicate `User` in apps.
