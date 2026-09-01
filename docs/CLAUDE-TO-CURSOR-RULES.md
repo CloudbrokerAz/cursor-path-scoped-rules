@@ -1,6 +1,6 @@
-# Claude `paths:` → Cursor `globs:` (talk track)
+# Claude `paths:` → Cursor `globs:`
 
-Dave asked whether Claude path-scoped rules transfer. Conceptually yes.
+Whether Claude path-scoped rules transfer: conceptually yes.
 Automatically, no — not as a first-class “import my `paths:`” product feature
 documented here.
 
@@ -66,4 +66,4 @@ npm run map-rules
 ```
 
 The script prints suggested Cursor frontmatter. Review by hand; it is a
-talk-track mapper, not an official importer.
+conceptual mapper, not an official importer.

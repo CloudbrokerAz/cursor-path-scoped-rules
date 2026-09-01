@@ -2,7 +2,7 @@
 /**
  * Conceptual mapper: Claude Code `.claude/rules` `paths:` → Cursor `globs:`.
  *
- * This is a talk-track helper, not an official importer.
+ * This is a conceptual mapping helper, not an official importer.
  * Cursor does not automatically convert Claude path rules.
  *
  * Usage: node scripts/map-claude-rules.mjs

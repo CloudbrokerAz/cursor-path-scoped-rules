@@ -1,4 +1,4 @@
-# How to validate path-scoped rules (Aaron)
+# How to validate path-scoped rules
 
 Use **Cursor Desktop** Agent on this repo. Cloud Agent / CLI can follow the
 same prompts, but the UI checks below assume Desktop.
@@ -184,19 +184,19 @@ See `.cursorignore` and [Ignore file](https://cursor.com/docs/reference/ignore-f
 
 ---
 
-## 7. Optional: migration talk track
+## 7. Optional: conceptual mapping
 
 ```bash
 npm run map-rules
 ```
 
 You should get Claude `paths:` printed as Cursor `globs:` +
-`alwaysApply: false`. Use [`docs/CLAUDE-TO-CURSOR-RULES.md`](docs/CLAUDE-TO-CURSOR-RULES.md)
-in the room. Do not claim this script is an official importer.
+`alwaysApply: false`. See [`docs/CLAUDE-TO-CURSOR-RULES.md`](docs/CLAUDE-TO-CURSOR-RULES.md).
+Do not claim this script is an official importer.
 
 ---
 
-## Pass / fail for the customer story
+## Pass / fail
 
 **Pass:** two clean chats (steps 1 and 2) show the other area’s canaries
 absent, Always Apply present, and the model follows the matching convention

@@ -1,9 +1,9 @@
 # Anti-pattern: dump every rule into every chat
 
-This is the failure mode Dave hit when pathing was not honoured: hundreds of
+This is the failure mode when pathing is not honoured: hundreds of
 instructions enter the context window whether or not they apply to the files
 in play. Tokens burn. The model gets contradictory guidance from unrelated
-areas. In a large “self-healing agentic” factory, that cost is real.
+areas. On a large ruleset, that cost is real.
 
 ## What it looks like
 

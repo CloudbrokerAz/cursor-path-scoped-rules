@@ -1,13 +1,14 @@
-# Path-scoped rules: Cursor can do Dave’s include-via-glob
+# Path-scoped Project Rules in Cursor
 
-A small, accurate demo for **Employment Hero / Dave Tong (CPTO)** and for
-internal FE use. It answers a question from a customer session on
-**1 Sep 2026**:
+A public demo of how Cursor Project Rules use `globs` and
+`alwaysApply: false` so only matching instructions enter the context
+window.
 
-> We have ~300 path/glob-scoped rules for a self-healing agentic software
-> factory. In Claude Code, rules with `paths:` only load when matching files
-> are in play. Without pathing, every rule dumps into the context window and
-> burns tokens. Can Cursor do the same? Are Claude rules transferable?
+**The problem:** A team with hundreds of path- or glob-scoped rules needs
+those rules to load only when matching files are in play. In Claude Code,
+rules with `paths:` only load when matching files are in play. Without
+pathing, every rule dumps into the context window and burns tokens. Can
+Cursor do the same? Are Claude rules transferable?
 
 **Short answer:** Yes — Cursor Project Rules with `globs` and
 `alwaysApply: false` auto-attach when a matching file is in context. That is
@@ -28,9 +29,9 @@ Rules are how you inject standing instructions into the **context window**.
 
 If you have ~300 conventions (web, API, shared libs, tests, infra, …) and
 you mark them all “always on,” every chat pays for all 300 — even when the
-engineer is only touching `apps/api`. That is expensive, noisy, and was the
-failure mode when pathing was not honoured (including an accidental Super
-Heavy / Grok Build usage burn).
+engineer is only touching `apps/api`. That is expensive and noisy. Tokens
+burn when all rules load into the window, whether or not they apply to the
+files in play.
 
 Claude Code’s fix: `.claude/rules` files with YAML `paths:` globs. A rule
 loads when matching files are in play.
@@ -55,7 +56,7 @@ From the official rules table:
 | `false` | provided | omitted | Agent reads the description and pulls the rule in when relevant. |
 | `false` | omitted | omitted | Included only when you `@`-mention the rule. |
 
-This repo uses all four types so you can see the contrast. The factory-scale
+This repo uses all four types so you can see the contrast. The large-ruleset
 story is the second row: **many small rules, only some attach**.
 
 Cursor also supports **nested `AGENTS.md`** in subdirectories. Those files
@@ -91,10 +92,10 @@ packages/shared/          Pure types/helpers (no framework)
 .cursor/rules/*.mdc       19 Project Rules (2 always-on, 15 glob-scoped, …)
 AGENTS.md                 Short root note
 apps/web/AGENTS.md        Nested AGENTS.md (second path-scoping demo)
-.claude/rules/            Sample Claude `paths:` rules for the talk track
+.claude/rules/            Sample Claude `paths:` rules for the mapping notes
 docs/ANTI-PATTERN.md      What happens if everything is Always Apply
 docs/CLAUDE-TO-CURSOR-RULES.md
-HOW-TO-VALIDATE.md        Aaron’s checklist
+HOW-TO-VALIDATE.md        Validation checklist
 ```
 
 Toy TypeScript only — enough real files for globs to match. Not a product.
@@ -105,7 +106,7 @@ attached. Full table: [`docs/RULES-INDEX.md`](docs/RULES-INDEX.md).
 
 ---
 
-## Anti-pattern (Dave’s 300-rule window fill)
+## Anti-pattern (300-rule window fill)
 
 If every rule is Always Apply, or you paste all 300 into one root
 `AGENTS.md`, Cursor will include them in every Agent chat. Globs on an
@@ -128,11 +129,11 @@ Details: [`docs/ANTI-PATTERN.md`](docs/ANTI-PATTERN.md)
 | Cursor automatically imports Claude path rules | **Not claimed** |
 | Claude Skills import | Discussed as tested separately — **not this repo** |
 
-Talk track: [`docs/CLAUDE-TO-CURSOR-RULES.md`](docs/CLAUDE-TO-CURSOR-RULES.md)
+Mapping notes: [`docs/CLAUDE-TO-CURSOR-RULES.md`](docs/CLAUDE-TO-CURSOR-RULES.md)
 
 ---
 
-## How to prove it (Aaron)
+## How to prove it
 
 Open this repo in **Cursor Desktop**, then follow
 [`HOW-TO-VALIDATE.md`](HOW-TO-VALIDATE.md).
@@ -148,4 +149,4 @@ You should see:
 
 ## License
 
-MIT. Public leave-behind for customer / FE workshops.
+MIT.
