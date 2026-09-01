@@ -1,0 +1,14 @@
+# ACCESS BLOCKING — not rule injection.
+#
+# `.cursorignore` hides files from Agent, Tab, Inline Edit, and @ mentions.
+# It does NOT decide which Project Rules load into the model context.
+#
+# Path-scoped rules (`.cursor/rules/*.mdc` with `globs:`) INCLUDE instructions
+# when a matching file is already in context. That is a different mechanism.
+# Docs: https://cursor.com/docs/reference/ignore-file
+#
+# This folder exists so you can prove the contrast in HOW-TO-VALIDATE.md:
+# `@local/private-notes.md` should be blocked; `apps/api` files should still
+# be readable, and API rules should still attach when those files are in play.
+
+local/

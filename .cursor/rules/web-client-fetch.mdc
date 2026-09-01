@@ -1,0 +1,8 @@
+---
+globs: apps/web/**
+alwaysApply: false
+---
+
+CANARY:WEB-CLIENT-FETCH
+
+Web may call the API over HTTP. Do not import `apps/api` source files from `apps/web`.

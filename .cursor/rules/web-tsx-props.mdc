@@ -1,0 +1,8 @@
+---
+globs: apps/web/**/*.tsx
+alwaysApply: false
+---
+
+CANARY:WEB-TSX-PROPS
+
+Export a `Props` type next to each TSX component. Keep props explicit; no `any`.

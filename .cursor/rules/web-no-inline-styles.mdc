@@ -1,0 +1,8 @@
+---
+globs: apps/web/**
+alwaysApply: false
+---
+
+CANARY:WEB-NO-INLINE-STYLES
+
+Do not use inline `style={{}}` in web UI. Use classes from `apps/web/src/styles.css`.

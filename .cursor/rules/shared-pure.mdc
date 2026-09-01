@@ -1,0 +1,8 @@
+---
+globs: packages/shared/**
+alwaysApply: false
+---
+
+CANARY:SHARED-PURE
+
+`packages/shared` is framework-free. Export pure functions and types only. No React, no HTTP server.

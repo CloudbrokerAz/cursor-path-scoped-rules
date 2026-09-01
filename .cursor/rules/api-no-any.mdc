@@ -1,0 +1,8 @@
+---
+globs: apps/api/**
+alwaysApply: false
+---
+
+CANARY:API-NO-ANY
+
+Do not use `any` in `apps/api`. Prefer `unknown` at the HTTP boundary, then parse.

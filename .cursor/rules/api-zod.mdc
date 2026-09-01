@@ -1,0 +1,8 @@
+---
+globs: apps/api/**
+alwaysApply: false
+---
+
+CANARY:API-ZOD
+
+Validate request bodies with Zod. Export types with `z.infer`. Do not hand-roll validators.
